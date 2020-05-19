@@ -35,7 +35,7 @@ jobs:
         source "${HOME}/.sdkman/bin/sdkman-init.sh"
         sdk install kotlin
     - name: markdownify_full
+      shell: bash -l {0}
       run: |
-        source "${HOME}/.bashrc"
         cd example
         rime markdownify_full && rime clean
