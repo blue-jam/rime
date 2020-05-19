@@ -34,9 +34,8 @@ jobs:
         curl -sL https://get.sdkman.io | bash
         source "${HOME}/.sdkman/bin/sdkman-init.sh"
         sdk install kotlin
-        ln -s $(which kotlin) /bin/kotlin
-        ln -s $(which kotlinc) /bin/kotlinc
     - name: markdownify_full
       run: |
+        source "${HOME}/.sdkman/bin/sdkman-init.sh"
         cd example
         rime markdownify_full && rime clean
